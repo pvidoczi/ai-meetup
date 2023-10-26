@@ -1,0 +1,18 @@
+<div class="master  container-fluid">
+  <div *ngIf="loading" class="row text-center" style="background-color: red; color: white;">
+    <h2>Loading...</h2>
+  </div>
+  <div class="row" >
+    <div class="col p-5">
+      <div class="row" #liveView>
+        <!-- <input
+          type="file"
+          class="custom-file-input"
+          (change)="fileChange($event)"
+        /> -->
+        <video autoplay playsinline muted id="vidEl"  #vidEl></video>
+      </div>
+
+    </div>
+  </div>
+</div>

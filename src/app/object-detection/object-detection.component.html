@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center align-items-center flex-column">
+  <div #liveView class="videoView">
+    <video autoplay playsinline muted id="webcam" #video></video>
+
+  </div>
+
+  <div *ngIf="loading">
+    <p>Betöltés</p>
+  </div>
+
+  <div class="list-group">
+    <div class="list-group-item" *ngFor="let prediction of predictions">
+      {{prediction.class}} - {{prediction.score}}
+    </div>
+  </div>
+</div>
